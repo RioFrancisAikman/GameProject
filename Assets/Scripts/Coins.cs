@@ -6,6 +6,7 @@ public class Coins : MonoBehaviour
 {
 
     public int coinsCollected;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -39,4 +40,6 @@ public class Coins : MonoBehaviour
     {
         Debug.Log("Stay still");
     }
+    
+    
 }

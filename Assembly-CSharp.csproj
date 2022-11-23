@@ -59,10 +59,17 @@
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\Cat.cs" />
     <Compile Include="Assets\Scripts\AudioPlayScript.cs" />
-    <Compile Include="Assets\Scripts\PlayerControllerSprite.cs" />
+    <Compile Include="Assets\Scripts\Gate.cs" />
+    <Compile Include="Assets\Scripts\RandomColour.cs" />
+    <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\PowerUp.cs" />
     <Compile Include="Assets\Scripts\Coins.cs" />
-    <Compile Include="Assets\Scripts\VolumeDetection.cs" />
-    <Compile Include="Assets\Scripts\EnemyFollowScript.cs" />
+    <Compile Include="Assets\Scripts\PlayerJump.cs" />
+    <Compile Include="Assets\Scripts\PowerUpEffect.cs" />
+    <Compile Include="Assets\Scripts\FirePowerUp.cs" />
+    <Compile Include="Assets\Scripts\IcePowerUp.cs" />
+    <Compile Include="Assets\Scripts\LogsScript.cs" />
+    <Compile Include="Assets\Scripts\RiverScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

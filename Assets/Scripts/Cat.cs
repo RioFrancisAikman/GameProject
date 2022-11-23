@@ -39,5 +39,6 @@ public class Cat : MonoBehaviour
             //not moving to the right
             myCatAnimator.SetBool("CatWalking", false);
         }
+
     }
 }

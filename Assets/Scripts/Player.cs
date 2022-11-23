@@ -9,7 +9,6 @@ public class Player : MonoBehaviour
     private float speed;
     public bool tutorialComplete;
     public int playerLevel;
-    public Transform spawnPoint;
     public Animator myAnimator;
     public GameObject mySprite;
 
@@ -22,6 +21,7 @@ public class Player : MonoBehaviour
     {
         speed = 2.2f;
         
+        
     }
 
     // Update is called once per frame
@@ -29,8 +29,10 @@ public class Player : MonoBehaviour
     {
         speed = 3.0f;
 
+        
+
         //Player Movement Code
-        //read the input of the horizontal and vertical, store them in a variabl
+        //read the input of the horizontal and vertical, store them in a variable
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
@@ -53,8 +55,12 @@ public class Player : MonoBehaviour
             myAnimator.SetBool("Walking", false);
         }
 
-        //Debug.Log("The vertical is " + verticalInput + " and the horizontal is " + horizontalInput);
-        Vector3 inputFromPlayer = new Vector3(horizontalInput, 0, verticalInput);
+
+        
+
+
+            //Debug.Log("The vertical is " + verticalInput + " and the horizontal is " + horizontalInput);
+            Vector3 inputFromPlayer = new Vector3(horizontalInput, 0, verticalInput);
 
         //move the player based on the values
         transform.Translate(inputFromPlayer * speed * Time.deltaTime);
@@ -75,21 +81,13 @@ public class Player : MonoBehaviour
 
         //using the return function to test if something is true
 
-        if (Input.GetButtonDown("Jump"))
-        {
-            Instantiate(myObjectToSpawn, spawnPoint.position, Quaternion.identity);
-        }
+        
 
         //coinsCollected++;
         //coinsCollected = coinsCollected + 1;
 
 
-        //picking up a bundle of coins
-        CollectedCoin(4);
-
-        //player traded some coins
-        CollectedCoin(5);
-
+        
 
 
 
@@ -105,7 +103,7 @@ public class Player : MonoBehaviour
 
 
 
-        coinsCollected = 1;
+       
 
         //OR example
         if (coinsCollected == 1 || coinsCollected == 2)
@@ -177,4 +175,6 @@ public class Player : MonoBehaviour
     {
         //Debug.Log("collision has ended with " + collision.gameObject.name);
     }
+
+   
 }
