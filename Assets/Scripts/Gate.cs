@@ -14,7 +14,7 @@ public class Gate : MonoBehaviour
         // making a refenrence between the player and gate
         Player player;
         player = GetComponent<Player>();
-        GetComponent<Player>().coinsCollected = 0;
+       gameObject.GetComponent<Player>().coinsCollected = 0;
 
     }
 

@@ -7,9 +7,9 @@ public class Cat : MonoBehaviour
     public Animator myCatAnimator;
     public GameObject myCatSprite;
     // Activates when FirePowerUp script is activated from collision
-    public bool fireAbility;
+    public bool fireAbility = false;
     // Activates when FirePowerUp script is activated from collision
-    public bool iceAbility;
+    public bool iceAbility = false;
 
     // Start is called before the first frame update
     void Start()
@@ -43,5 +43,16 @@ public class Cat : MonoBehaviour
             myCatAnimator.SetBool("CatWalking", false);
         }
 
+        if (fireAbility)
+        {
+            MeshRenderer f = GetComponent<MeshRenderer>();
+            f.material.color = Color.red;
+        }
+        if (iceAbility)
+        {
+            MeshRenderer i = GetComponent<MeshRenderer>();
+            i.material.color = Color.blue;
+        }
+       
     }
 }

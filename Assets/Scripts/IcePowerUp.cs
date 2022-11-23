@@ -8,6 +8,6 @@ public class IcePowerUp : PowerUpEffect
     // Cat sprite changes colour to blue
     public override void Apply(GameObject target)
     {
-        
+       
     }
 }
