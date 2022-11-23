@@ -6,14 +6,17 @@ public class Cat : MonoBehaviour
 {
     public Animator myCatAnimator;
     public GameObject myCatSprite;
-
+    // Activates when FirePowerUp script is activated from collision
+    public bool fireAbility;
+    // Activates when FirePowerUp script is activated from collision
+    public bool iceAbility;
 
     // Start is called before the first frame update
     void Start()
     {
         
     }
-
+    
     // Update is called once per frame
     void Update()
     {

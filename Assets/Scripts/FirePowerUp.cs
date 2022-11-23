@@ -8,6 +8,6 @@ public class FirePowerUp : PowerUpEffect
     // Cat sprite changes colour to red
    public override void Apply(GameObject target)
     {
-
+        
     }
 }
