@@ -247,15 +247,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 10199389}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 905baa5bc2ce72b449a1d337435916d5, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a11b1716794f9448abd441230b5b074, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinsCollected: 0
-  tutorialComplete: 0
-  playerLevel: 0
-  myAnimator: {fileID: 0}
-  mySprite: {fileID: 0}
-  myObjectToSpawn: {fileID: 0}
+  speed: 3
 --- !u!1 &1067521342
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,7 +277,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1067521342}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.010306597, y: 0.067163706, z: -2.6648588}
+  m_LocalPosition: {x: -0.010306597, y: 0.067163706, z: -3.494}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 10199394}
@@ -447,6 +442,7 @@ GameObject:
   - component: {fileID: 1241457878}
   - component: {fileID: 1241457877}
   - component: {fileID: 1241457876}
+  - component: {fileID: 1241457880}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -530,6 +526,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1241457880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241457875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1cd80fdf8e01cd4092a06d99cc0f2ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 10199389}
 --- !u!1 &2053869906
 GameObject:
   m_ObjectHideFlags: 0
