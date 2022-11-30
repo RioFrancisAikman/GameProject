@@ -56,20 +56,24 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\FirePowerUp.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\Cat.cs" />
     <Compile Include="Assets\Scripts\AudioPlayScript.cs" />
+    <Compile Include="Assets\Scripts\IcePowerUp.cs" />
     <Compile Include="Assets\Scripts\Gate.cs" />
     <Compile Include="Assets\Scripts\RandomColour.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\RiverScript.cs" />
     <Compile Include="Assets\Scripts\PowerUp.cs" />
     <Compile Include="Assets\Scripts\Coins.cs" />
     <Compile Include="Assets\Scripts\PlayerJump.cs" />
     <Compile Include="Assets\Scripts\PowerUpEffect.cs" />
-    <Compile Include="Assets\Scripts\FirePowerUp.cs" />
-    <Compile Include="Assets\Scripts\IcePowerUp.cs" />
     <Compile Include="Assets\Scripts\LogsScript.cs" />
-    <Compile Include="Assets\Scripts\RiverScript.cs" />
+    <Compile Include="Assets\Scripts\TransporterExit.cs" />
+    <Compile Include="Assets\Scripts\PlayerTransporter.cs" />
+    <Compile Include="Assets\Scripts\TransporterEnter.cs" />
+    <Compile Include="Assets\Scripts\DistanceScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
