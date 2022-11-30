@@ -12,6 +12,7 @@ public class TransporterEnter : MonoBehaviour
         if (PlayerPrefs.GetString("LastExitName") == lastExitName)
         {
             PlayerTransporter.instance.transform.position = transform.position;
+            PlayerTransporter.instance.transform.eulerAngles = transform.eulerAngles;
         }
     }
 
