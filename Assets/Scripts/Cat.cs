@@ -10,6 +10,9 @@ public class Cat : MonoBehaviour
     public bool fireAbility = false;
     // Activates when FirePowerUp script is activated from collision
     public bool iceAbility = false;
+    Renderer r;
+
+  
 
     // Start is called before the first frame update
     void Start()
@@ -53,6 +56,8 @@ public class Cat : MonoBehaviour
             MeshRenderer i = GetComponent<MeshRenderer>();
             i.material.color = Color.blue;
         }
+
        
+
     }
 }

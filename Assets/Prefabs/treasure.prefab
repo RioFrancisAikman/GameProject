@@ -12,10 +12,9 @@ GameObject:
   - component: {fileID: 1742830433868177938}
   - component: {fileID: 1742830433868177939}
   - component: {fileID: 1742830433868177940}
-  - component: {fileID: 1742830433868177936}
-  - component: {fileID: 2888522948351603734}
+  - component: {fileID: 6240366164185527755}
   m_Layer: 0
-  m_Name: treasure
+  m_Name: Treasure
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,7 +96,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.50066125
   m_Center: {x: 0.029868968, y: 0, z: 0.051192164}
---- !u!114 &1742830433868177936
+--- !u!114 &6240366164185527755
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,25 +108,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e3b24351dae6a4458833bba65fea723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinsCollected: 0
---- !u!114 &2888522948351603734
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1742830433868177941}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 192036d394e40044d9bc0dfa8ac3c6db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ColorBank:
-  - {r: 1, g: 0, b: 0, a: 0}
-  - {r: 1, g: 0.38606954, b: 0, a: 0}
-  - {r: 1, g: 0.9831489, b: 0, a: 0}
-  - {r: 0, g: 1, b: 0.045170784, a: 0}
-  - {r: 0, g: 0.3614483, b: 1, a: 0}
-  - {r: 0.7042122, g: 0, b: 1, a: 0}
-  mesh: 1
-  sprite: 0
+  value: 1

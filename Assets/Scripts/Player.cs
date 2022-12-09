@@ -11,6 +11,16 @@ public class Player : MonoBehaviour
     public int playerLevel;
     public Animator myAnimator;
     public GameObject mySprite;
+    Player myPlayer_script;
+    Player myPlayer2_script;
+    Player myPlayer3_script;
+
+
+    public bool firePowerup;
+    public float fireTimer;
+    public bool icePowerup;
+    public float iceTimer;
+    Renderer r;
 
     public GameObject myObjectToSpawn;
     //public Text coinUIText;
@@ -21,13 +31,19 @@ public class Player : MonoBehaviour
     {
         speed = 2.2f;
         
-        
+        r = GetComponent<Renderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
         speed = 3.0f;
+
+        Fireball();
+        Iceball();
+        
+
+        
 
         
 
@@ -176,5 +192,95 @@ public class Player : MonoBehaviour
         //Debug.Log("collision has ended with " + collision.gameObject.name);
     }
 
-   
+    public void FireballPowerUpFunction()
+    {
+        //turn on fire power
+        firePowerup = true;
+        //reset timer
+        fireTimer = 0.0f;
+
+    }
+
+    public void IceballPowerUpFunction()
+    {
+        //turn on ice power
+        icePowerup = true;
+        //reset timer
+       iceTimer = 0.0f;
+
+    }
+
+    void Fireball()
+    {
+        if (Input.GetButton("FireAttack"))
+        {
+            if (firePowerup == true)
+            {
+                
+                Debug.Log("Your cat used Fire Blast");
+            }
+            else
+            {
+                //no power, no fire
+                Debug.Log("No Powerup!");
+                firePowerup = false;
+            }
+        }
+
+        //add the fraction of a second to our timer
+        fireTimer += Time.deltaTime;
+        if (fireTimer >= 10.0f)
+        {
+            //run out of time to shoot ice
+            firePowerup = false;
+            r.material.color = Color.white;
+        }
+      
+
+
+
+        //fire powerup
+        if (firePowerup == true)
+        {
+            r.material.color = Color.red;
+        }
+        
+    }
+
+    void Iceball()
+    {
+        if (Input.GetButton("IceAttack"))
+        {
+            if (icePowerup == true)
+            {
+               
+                Debug.Log("Your cat used Ice Blast");
+            }
+            else
+            {
+                //no power, no ice
+                Debug.Log("No Powerup!");
+                icePowerup = false;
+            }
+        }
+
+        //add the fraction of a second to our timer
+        iceTimer += Time.deltaTime;
+        if (iceTimer >= 10.0f)
+        {
+            //run out of time to shoot ice
+            firePowerup = false;
+            r.material.color = Color.white;
+        }
+
+
+
+        //ice powerup
+        if (icePowerup == true)
+        {
+            r.material.color = Color.blue;
+        }
+        
+    }
 }
+

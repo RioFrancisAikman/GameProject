@@ -58,22 +58,50 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\FirePowerUp.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\FirePowerUpEffect.cs" />
     <Compile Include="Assets\Scripts\Cat.cs" />
     <Compile Include="Assets\Scripts\TransporterEnter.cs" />
     <Compile Include="Assets\Scripts\AudioPlayScript.cs" />
     <Compile Include="Assets\Scripts\PlayerTransporter.cs" />
     <Compile Include="Assets\Scripts\IcePowerUp.cs" />
-    <Compile Include="Assets\Scripts\Gate.cs" />
+    <Compile Include="Assets\Scripts\Gate2.cs" />
+    <Compile Include="Assets\Scripts\Gate1.cs" />
     <Compile Include="Assets\Scripts\TransporterExit.cs" />
     <Compile Include="Assets\Scripts\RandomColour.cs" />
+    <Compile Include="Assets\Scripts\PlayerSimple.cs" />
     <Compile Include="Assets\Scripts\RiverScript.cs" />
-    <Compile Include="Assets\Scripts\PowerUp.cs" />
+    <Compile Include="Assets\Scripts\CoinCounter.cs" />
+    <Compile Include="Assets\Scripts\PowerUpIce.cs" />
+    <Compile Include="Assets\Scripts\PowerUpFire.cs" />
     <Compile Include="Assets\Scripts\Coins.cs" />
     <Compile Include="Assets\Scripts\PlayerJump.cs" />
     <Compile Include="Assets\Scripts\DistanceScript.cs" />
     <Compile Include="Assets\Scripts\PowerUpEffect.cs" />
     <Compile Include="Assets\Scripts\LogsScript.cs" />
-    <Compile Include="Assets\Scripts\PlayerSimple.cs" />
+    <Compile Include="Assets\Scripts\Gate3.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
