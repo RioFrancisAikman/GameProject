@@ -28,14 +28,19 @@ public class RiverScript : MonoBehaviour
     }
     private void OnTriggerEnter(Collider collider)
     {
-        Debug.Log("Water freezes");
+       
 
         if (collider.gameObject.tag == "IceProjectile")
         {
            // Water freezes and player can walk on it
-            collider.gameObject.SetActive(false);
+            
             isWaterFrozen = true;
+
+            Debug.Log("Water freezes");
+
             
         }
     }
+
+   
 }

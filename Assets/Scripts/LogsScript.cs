@@ -17,13 +17,13 @@ public class LogsScript : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider collider)
+    public void OnTriggerEnter(Collider collider)
     {
-        Debug.Log("Logs burned");
+        
         // When the player uses their powerup effect they can destroy any objects that are named "Logs"
         if (collider.gameObject.tag == "FireProjectile")
         {
-           
+           Debug.Log("Logs burned");
             collider.gameObject.SetActive(true);
             // Destroyed after hit with a projectile
             Destroy(gameObject, 0.5f);

@@ -113,11 +113,11 @@ public class Player : MonoBehaviour
         if (coinsCollected == 1)
         {
             //is true, do some code
-            Debug.Log("its TRUEEEEEEEEEEEEEEEEEEEEEE, we have 1 coins now");
+           // Debug.Log("its TRUEEEEEEEEEEEEEEEEEEEEEE, we have 1 coins now");
         }
         else
         {
-            Debug.Log("it wasnt true after all, we have 0 coins");
+            //Debug.Log("it wasnt true after all, we have 0 coins");
         }
 
 
@@ -128,11 +128,11 @@ public class Player : MonoBehaviour
         if (coinsCollected == 1 || coinsCollected == 2)
         {
 
-            Debug.Log("we have 1 or 2 coins, but not 0 or 3+");
+           // Debug.Log("we have 1 or 2 coins, but not 0 or 3+");
         }
         else
         {
-            Debug.Log("we have 0 or 3+ coins, but not 1 or 2");
+           // Debug.Log("we have 0 or 3+ coins, but not 1 or 2");
 
         }
 
@@ -142,12 +142,12 @@ public class Player : MonoBehaviour
         if (coinsCollected == 1 && tutorialComplete == true && speed > 3.0f)
         {
             //
-            Debug.Log("have 1 coin, and tutorial is complete (true)");
+            //Debug.Log("have 1 coin, and tutorial is complete (true)");
 
         }
         else
         {
-            Debug.Log("either we dont have 1 coin, or the tutorial is not complete");
+           // Debug.Log("either we dont have 1 coin, or the tutorial is not complete");
         }
 
         ///
@@ -180,7 +180,7 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("collision has happened eh, and it was " + collision.gameObject.name);
+       // Debug.Log("collision has happened eh, and it was " + collision.gameObject.name);
 
         if (collision.gameObject.name == "Wall")
         {
@@ -216,7 +216,7 @@ public class Player : MonoBehaviour
 
    public void Fireball()
     {
-        if (Input.GetButton("FireAttack"))
+        if (Input.GetButtonDown("FireAttack"))
         {
             if (firePowerup == true)
             {
@@ -226,8 +226,8 @@ public class Player : MonoBehaviour
                 Rigidbody r = FireProjectile.GetComponent<Rigidbody>();
 
                 FireProjectile.transform.rotation = Quaternion.Euler(new Vector3(0, 90, 0));
-                Debug.Break();
-                r.AddRelativeForce(Vector3.forward * 10);
+              //  Debug.Break();
+                r.AddRelativeForce(Vector3.forward * 100);
             }
             else
             {
@@ -255,7 +255,7 @@ public class Player : MonoBehaviour
 
     void Iceball()
     {
-        if (Input.GetButton("IceAttack"))
+        if (Input.GetButtonDown("IceAttack"))
         {
             if (icePowerup == true)
             {
@@ -265,8 +265,8 @@ public class Player : MonoBehaviour
                 Rigidbody r = IceProjectile.GetComponent<Rigidbody>();
 
                 IceProjectile.transform.rotation = Quaternion.Euler(new Vector3(0, 90, 0));
-                Debug.Break();
-                r.AddRelativeForce(Vector3.forward * 10);
+                //Debug.Break();
+                r.AddRelativeForce(Vector3.forward * 100);
             }
             else
             {

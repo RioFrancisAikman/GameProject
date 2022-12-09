@@ -19,6 +19,7 @@ public class Gate3 : MonoBehaviour
     {
         if (myplayer_script3.coinsCollected == 30)
         {
+            Debug.Log("Gate Opened");
             transform.position = new Vector3(0, -10, 0);
 
         }
