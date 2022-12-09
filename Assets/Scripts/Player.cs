@@ -22,7 +22,10 @@ public class Player : MonoBehaviour
     public float iceTimer;
     Renderer r;
 
-    public GameObject myObjectToSpawn;
+    public Transform fireSpawnPoint;
+    public GameObject myFireObjectToSpawn;
+    public Transform iceSpawnPoint;
+    public GameObject myIceObjectToSpawn;
     //public Text coinUIText;
 
 
@@ -30,7 +33,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         speed = 2.2f;
-        
+      
         r = GetComponent<Renderer>();
     }
 
@@ -198,6 +201,7 @@ public class Player : MonoBehaviour
         firePowerup = true;
         //reset timer
         fireTimer = 0.0f;
+       
 
     }
 
@@ -210,7 +214,7 @@ public class Player : MonoBehaviour
 
     }
 
-    void Fireball()
+   public void Fireball()
     {
         if (Input.GetButton("FireAttack"))
         {
@@ -218,32 +222,34 @@ public class Player : MonoBehaviour
             {
                 
                 Debug.Log("Your cat used Fire Blast");
+                GameObject FireProjectile = Instantiate(myFireObjectToSpawn, fireSpawnPoint.position, Quaternion.identity) as GameObject;
+                Rigidbody r = FireProjectile.GetComponent<Rigidbody>();
+
+                FireProjectile.transform.rotation = Quaternion.Euler(new Vector3(0, 90, 0));
+                Debug.Break();
+                r.AddRelativeForce(Vector3.forward * 10);
             }
             else
             {
                 //no power, no fire
-                Debug.Log("No Powerup!");
-                firePowerup = false;
+                Debug.Log("No Fire Powerup!");
+                
             }
         }
 
         //add the fraction of a second to our timer
         fireTimer += Time.deltaTime;
-        if (fireTimer >= 10.0f)
+        if (fireTimer >= 60.0f)
         {
-            //run out of time to shoot ice
+            //run out of time to shoot fire
             firePowerup = false;
-            r.material.color = Color.white;
+            
         }
       
 
 
 
-        //fire powerup
-        if (firePowerup == true)
-        {
-            r.material.color = Color.red;
-        }
+        
         
     }
 
@@ -255,31 +261,49 @@ public class Player : MonoBehaviour
             {
                
                 Debug.Log("Your cat used Ice Blast");
+                GameObject IceProjectile = Instantiate(myIceObjectToSpawn, iceSpawnPoint.position, Quaternion.identity) as GameObject;
+                Rigidbody r = IceProjectile.GetComponent<Rigidbody>();
+
+                IceProjectile.transform.rotation = Quaternion.Euler(new Vector3(0, 90, 0));
+                Debug.Break();
+                r.AddRelativeForce(Vector3.forward * 10);
             }
             else
             {
                 //no power, no ice
-                Debug.Log("No Powerup!");
+                Debug.Log("No Ice Powerup!");
                 icePowerup = false;
             }
         }
 
         //add the fraction of a second to our timer
         iceTimer += Time.deltaTime;
-        if (iceTimer >= 10.0f)
+        if (iceTimer >= 60.0f)
         {
             //run out of time to shoot ice
-            firePowerup = false;
-            r.material.color = Color.white;
+            icePowerup = false;
+            
         }
 
 
-
+        //fire powerup
+        if (firePowerup == true)
+        {
+            r.material.color = Color.red;
+        }
         //ice powerup
-        if (icePowerup == true)
+        else if (icePowerup == true)
         {
             r.material.color = Color.blue;
         }
+        else
+        {
+            r.material.color = Color.white;
+        }
+
+        
+        
+       
         
     }
 }

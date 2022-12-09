@@ -21,11 +21,12 @@ public class PowerUpFire : MonoBehaviour
 
         if (other.tag == "Player")
         {
-            Debug.Log("the player has entered the trigger");
+            Debug.Log("the cat ate the fire berry");
             Player thePlayer = other.gameObject.GetComponent<Player>();
 
             //pickup the fire berry by setting the players bool to true
             thePlayer.FireballPowerUpFunction();
+            
             
 
             Destroy(gameObject);

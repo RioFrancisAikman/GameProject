@@ -20,7 +20,7 @@ public class PowerUpIce : MonoBehaviour
 
         if (other.tag == "Player")
         {
-            Debug.Log("the player has entered the trigger");
+            Debug.Log("the cat ate the ice berry");
             Player thePlayer = other.gameObject.GetComponent<Player>();
 
             //pickup the ice berry by setting the players bool to true
