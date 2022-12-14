@@ -11,9 +11,11 @@ public class Player : MonoBehaviour
     public int playerLevel;
     public Animator myAnimator;
     public GameObject mySprite;
+
     Player myPlayer_script;
     Player myPlayer2_script;
     Player myPlayer3_script;
+    Player myPlayerCat_script;
 
 
     public bool firePowerup;
@@ -292,11 +294,11 @@ public class Player : MonoBehaviour
             r.material.color = Color.red;
         }
         //ice powerup
-        else if (icePowerup == true)
+        if (icePowerup == true)
         {
             r.material.color = Color.blue;
         }
-        else
+       if (firePowerup == false && icePowerup == false)
         {
             r.material.color = Color.white;
         }

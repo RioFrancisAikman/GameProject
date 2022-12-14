@@ -5,6 +5,11 @@ using UnityEngine;
 public class RiverScript : MonoBehaviour
 {
     public bool isWaterFrozen;
+    bool isdone = false;
+    public Transform riverSpawnPoint;
+    public GameObject myFrozenObjectToSpawn;
+    public float delay = 10;
+    float riverTimer;
 
     // Start is called before the first frame update
     void Start()
@@ -15,16 +20,31 @@ public class RiverScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isWaterFrozen)
+        riverTimer += Time.deltaTime;
+        if (isdone == false)
         {
-            //Colour changes to show that the river is frozen
-            MeshRenderer r = GetComponent<MeshRenderer>();
-            r.material.color = Color.white;
+            if (isWaterFrozen)
+            {
+                //Colour changes to show that the river is frozen
+                MeshRenderer r = GetComponent<MeshRenderer>();
+                r.material.color = Color.white;
+               
+
+                if (riverTimer > delay)
+                {
+                    Destroy(gameObject);
+                }
+                GameObject FrozenRiver = Instantiate(myFrozenObjectToSpawn, riverSpawnPoint.position, Quaternion.identity) as GameObject;
+
+                isdone = true;
+
+            }
+            else
+            {
+                isWaterFrozen = false;
+            }
         }
-        else
-        {
-            isWaterFrozen = false;
-        }
+       
     }
     private void OnTriggerEnter(Collider collider)
     {
@@ -35,10 +55,9 @@ public class RiverScript : MonoBehaviour
            // Water freezes and player can walk on it
             
             isWaterFrozen = true;
-
+            
             Debug.Log("Water freezes");
 
-            
         }
     }
 

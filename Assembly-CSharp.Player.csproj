@@ -79,6 +79,7 @@
     <Compile Include="Assets\Scripts\PowerUpEffect.cs" />
     <Compile Include="Assets\Scripts\LogsScript.cs" />
     <Compile Include="Assets\Scripts\Gate3.cs" />
+    <Compile Include="Assets\Scripts\CatPower.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
